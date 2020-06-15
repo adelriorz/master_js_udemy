@@ -14,11 +14,15 @@ do{
     if(isNaN(numero)){
         numero = 0;
     } else if(numero >= 0){
-        sume += numero;
-        contador++;
+       suma = suma + numero; 
+       //suma += numero;
+      contador++;
     }
     
     console.log(suma);
     console.log(contador);
 
-}while(parseInt(prompt()) < 0);
+}while(numero >= 0)
+
+alert("La suma de todos los números es: " + suma);
+alert("La media de los números introducidos es: " + suma/contador);
