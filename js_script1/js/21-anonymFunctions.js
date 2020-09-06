@@ -16,12 +16,28 @@ console.log(movie);
  *  later on it's summoned within an external function to complete a routine or action.
  *  https://developer.mozilla.org/es/docs/Glossary/Callback_function
 */
-
+//var dato = 0;
 function sumMe(num1, num2){
     let sum = num1 + num2;
     return sum;
 }
 console.log(sumMe(4, 5));
+
+function sumaMe(num1, num2, sumaYMuestra, sumaPorDos){
+    let sumar = num1 + num2;
+    sumaYMuestra(sumar);
+    sumaPorDos(sumar);
+
+    return sumar;
+}
+
+sumaMe(5, 7, function(dato){ //Anonym functions executed as callback
+            console.log("La suma es: ", dato);
+        },
+        function(dato){
+            console.log("La suma por dos es: ", dato*2);
+        }
+    );
 
 var a = [1, 2, 3];
 console.log(a[0]);
